@@ -1,0 +1,1 @@
+var APP_ID="qPv1WNQew34FTEuaGxEKHzqt-gzGzoHsz",APP_KEY="W7HA63OOB6oWtMQPOj6Cenr7";AV.init({appId:APP_ID,appKey:APP_KEY});
