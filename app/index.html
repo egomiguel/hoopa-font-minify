@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Hoopa</title>
+  <meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+  <meta name="author" content="author">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Web Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> -->
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CSS -->
+  <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Font and Icon Hoopa CSS -->
+  <link href="fonts/font-hoopa/style.css" rel="stylesheet">
+
+
+  <!-- Plugins -->
+  <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="plugins/rs-plugin-5/css/settings.css" rel="stylesheet">
+  <link href="plugins/rs-plugin-5/css/layers.css" rel="stylesheet">
+  <link href="plugins/rs-plugin-5/css/navigation.css" rel="stylesheet">
+  <link href="css/animations.css" rel="stylesheet">
+  <link href="plugins/slick/slick.css" rel="stylesheet">
+
+  <link href="bower_components/angular-carousel/dist/angular-carousel.min.css" rel="stylesheet">
+  <!-- The Project's core CSS file -->
+  <!-- Use css/rtl_style.css for RTL version -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- The Project's Typography CSS file, includes used fonts -->
+  <!-- Used font for body: Roboto -->
+  <!-- Used font for headings: Raleway -->
+  <!-- Use css/rtl_typography-default.css for RTL version -->
+  <link href="css/typography-default.css" rel="stylesheet">
+  <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+  <link href="css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="front-page transparent-header" ng-controller="MainCtrl">
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle">
+    <i class="fa fa-angle-up"></i>
+  </div>
+
+  <!-- <ul class="menu">
+    <li><a href="#!/view1">view1</a></li>
+    <li><a href="#!/view2">view2</a></li>
+  </ul> -->
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header-top start -->
+      <!-- classes:  -->
+      <!-- "dark": dark version of header top e.g. class="header-top dark" -->
+      <!-- "colored": colored version of header top e.g. class="header-top colored" -->
+      <!-- ================ -->
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-3 col-sm-6 col-lg-9">
+              <!-- header-top-first start -->
+              <!-- ================ -->
+              <div class="header-top-first clearfix">
+                <!-- <ul class="social-links circle small clearfix hidden-sm-down"> -->
+                <!-- <li class="twitter">
+                    <a href="">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="skype">
+                    <a href="">
+                      <i class="fa fa-skype"></i>
+                    </a>
+                  </li>
+                  <li class="linkedin">
+                    <a href="">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li> -->
+                <!-- <li class="googleplus">
+                    <a href="">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li class="youtube">
+                    <a href="">
+                      <i class="fa fa-youtube-play"></i>
+                    </a>
+                  </li> -->
+                <!-- <li class="flickr">
+                    <a href="">
+                      <i class="fa fa-flickr"></i>
+                    </a>
+                  </li>
+                  <li class="facebook">
+                    <a href="">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="pinterest">
+                    <a href="">
+                      <i class="fa fa-pinterest"></i>
+                    </a>
+                  </li>
+                </ul> -->
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" ng-cloak>
+                    <i class="text-default fa fa-map-marker pr-1 pl-2"></i>{{'COMPANYADDRESS' | translate}}</li>
+                  <li class="list-inline-item">
+                    <a href="tel:+86 0571 85267521" class="link-dark">
+                      <i class="text-default fa fa-phone pr-1 pl-2"></i>+86 0571 85267521</a>
+                  </li>
+                  <!-- <li class="list-inline-item">
+                    <a href="mailto:email@domain.com" class="link-dark">
+                      <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>email@domain.com</a>
+                  </li> -->
+                </ul>
+              </div>
+              <!-- header-top-first end -->
+            </div>
+            <div class="col-9 col-sm-6 col-lg-3">
+
+              <!-- header-top-second start -->
+              <!-- ================ -->
+              <div id="header-top-second" class="clearfix">
+
+                <!-- header top dropdowns start -->
+                <!-- ================ -->
+                <div class="header-top-dropdown text-right">
+                  <!-- <div class="btn-group">
+                    <a href="" class="btn btn-sm paddingLR10">
+                      <span class="icon-user spanSignUp"></span>
+                      {{'SIGNUP' | translate}}
+                    </a>
+                  </div> -->
+                  <div class="btn-group">
+                    <button ng-hide="loginUser" ng-click="customGoTo('login/home')" type="button" class="btn paddingLR10 btn-sm backgroundGray colorTextGray hoverPrimary"
+                      ng-cloak>
+                      <i class="icon-Login spanSignUp"></i>
+                      {{'LOGIN' | translate}}
+                    </button>
+                    <button ng-show="loginUser" id="header-top-drop-2" type="button" class="btn dropdown-toggle paddingLR10 btn-sm dropdown-toggle--no-caret backgroundGray colorTextGray"
+                      style="height:30px !important;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
+                      <img ng-hide="avatar !=''" class="avatarImageBanner" src="images/avatar.jpg">
+                      <img ng-show="avatar !=''" class="avatarImageBanner" ng-src="{{avatar}}">
+                    </button>
+                    <ul id="userDropdown" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-2">
+                      <li class="cursorPointer languageActive" ng-cloak>
+                        <a class="fontSize14" ng-click="logout()">
+                          <i class="icon-Unlogin iconUnloginClass pr-2"></i>
+                          {{'LOGOUT' | translate}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button id="header-top-drop-1" type="button" class="btn dropdown-toggle btn-sm paddingLR10 backgroundGray colorTextGray hoverPrimary"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>
+                      {{languageShort}}</button>
+                    <ul id="language" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-top-drop-1">
+                      <li href="" class="languageActive" ng-click="setLanguage('cn_CN')">
+                        <a class="colorInherit">{{'CHINESE' | translate}}</a>
+                      </li>
+                      <li href="" class="languageActive" ng-click="setLanguage('en_EN')">
+                        <a class="colorInherit">{{'ENGLISH' | translate}}</a>
+                      </li>
+                      <li href="" class="languageActive" ng-click="setLanguage('es_ES')">
+                        <a class="colorInherit">{{'SPANISH' | translate}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!--  header top dropdowns end -->
+              </div>
+              <!-- header-top-second end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-top end -->
+
+      <!-- header start -->
+      <!-- classes:  -->
+      <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+      <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+      <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+      <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+      <!-- "centered": mandatory class for the centered logo layout -->
+      <!-- ================ -->
+      <header class="header fixed fixed-desktop clearfix backgroundWhite">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto hidden-md-down">
+              <!-- header-first start -->
+              <!-- ================ -->
+              <div class="header-first clearfix">
+
+                <!-- logo -->
+                <div id="logo" class="logo">
+                  <a href="index.html">
+                    <img class="logo_img" id="logo_img" src="images/LogoHoopa.png" alt="Hoopa">
+                  </a>
+                </div>
+
+                <!-- name-and-slogan -->
+                <!-- <div class="site-slogan">
+                          Multipurpose HTML5 Template
+                        </div> -->
+
+              </div>
+              <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-12 ml-auto widthDropdown">
+              <div class="header-second clearfix">
+                <div class="main-navigation main-navigation--mega-menu main-navigation--style-2  animated">
+                  <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <div class="navbar-brand clearfix hidden-lg-up">
+                      <div id="logo-mobile" class="logo">
+                        <a href="index.html">
+                          <img class="logo_img" id="logo-img-mobile" src="images/LogoHoopa.png" alt="Hoopa">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                      <div class="btn-group">
+                        <button type="button" ng-click="customGoTo('projects')" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="icon-Search marginLeft5"></i>
+                        </button>
+                        <ul id="searchPage" class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                          <li>
+                            <form role="search" class="search-box margin-clear">
+                              <div class="form-group has-feedback">
+                                <input type="text" class="form-control" placeholder="Search" ng-model="searchFilterText">
+                                <i ng-click="search(searchFilterText)" class="icon-Search form-control-feedback cursorPointer"></i>
+                              </div>
+                            </form>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-group" ng-hide="!loginUser">
+                        <a type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-4" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false" ng-click="initWishList()" ng-cloak>
+                          <i class="fa fa-heart-o marginLeft5"></i>
+                          <span class="cart-count default-bg" ng-show="shopCartArray.length > 0">{{shopCartCount}}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-4">
+                          <li>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                                  <th class="amount" ng-cloak>{{'DAMOUNT' | translate}}</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="cursorPointer" ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
+                                  <td class="product">
+                                    <a href="" ng-click="goToProject(product.get('project').id)">
+                                      <span class="small" ng-cloak>{{product.get('project').get('title')}}</span>
+                                    </a>
+                                  </td>
+                                  <td class="amount colorPrimary" ng-cloak>
+                                    ¥{{product.get('project').get('debitAmount')}}万</td>
+                                </tr>
+                                <tr>
+                                  <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="panel-body text-right">
+                              <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-group" ng-hide="!loginUser">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ng-click="initOffersList()">
+                          <i class="icon-Total-offers marginLeft5"></i>
+                          <span class="cart-count default-bg" ng-show="offersCartCount > 0" ng-cloak>{{offersCartCount}}</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
+                          <li>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                                  <th class="amount" ng-cloak>{{'AMOUNT' | translate}}</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
+                                  <td class="product">
+                                    <a href="" ng-click="goToProject(offer.get('project').id)">
+                                      <span class="small" ng-cloak>{{offer.get('project').get('title')}}</span>
+                                    </a>
+                                  </td>
+                                  <td class="amount colorPrimary" ng-cloak>
+                                    <¥{{offer.get( 'amount')}}万</td>
+                                </tr>
+                                <tr>
+                                  <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- <div class="panel-body text-right">
+                                <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
+                              </div> -->
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                      <ul class="navbar-nav ml-xl-auto">
+                        <li class="nav-item">
+                          <a href="index.html" class="nav-link" ng-cloak>{{'HOME' | translate }}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'GROUPOVERVIEW' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                            <li>
+                              <a href="" ng-click="customGoTo('groupIntroduction')" ng-cloak>
+                                <i class="icon-Group-Introduction iconMenuClass pr-2"></i>{{'GROUPINTRODUCTION' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('organizationStructure')" ng-cloak>
+                                <i class="icon-Organization-structure iconMenuClass pr-2"></i>{{'STRUCTURE' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('coreteam')" ng-cloak>
+                                <i class="icon-Core-Team iconMenuClass pr-2"></i>{{'CORETEAM' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('devhistory')" ng-cloak>
+                                <i class="icon-Development-history iconMenuClass pr-2"></i>{{'DEVHISTORY' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-cloak>
+                                <i class="icon-Group-honors iconMenuClass pr-2"></i>{{'GROUPHONORS' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('charman')" ng-cloak>
+                                <i class="icon-Chairmans-Message iconMenuClass pr-2"></i>{{'CHAIRMAN' | translate }}</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'SERVICES' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                            <li>
+                              <a href="" ng-click="customGoTo('bussinessystem')" ng-cloak>
+                                <i class="icon-Business-System iconMenuClass pr-2"></i>{{'BSYSTEM' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('bussinesprocess')" ng-cloak>
+                                <i class="icon-Service-process iconMenuClass pr-2"></i>{{'SPROCESS' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-cloak>
+                                <i class="icon-Service-Advantages iconMenuClass pr-2"></i>{{'SADVANTAGES' | translate }}</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'NEWS' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                            <li>
+                              <a href="" ng-click="customGoTo('news/1')" ng-cloak>
+                                <i class="icon-Media-coverage iconMenuClass pr-2"></i>{{'MCOVERAGE' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('news/2')" ng-cloak>
+                                <i class="icon-Latest-News iconMenuClass pr-2"></i>{{'LNEWS' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('news/3')" ng-cloak>
+                                <i class="icon-Industry-News iconMenuClass pr-2"></i>{{'INEWS' | translate }}</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'ASSETS' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                            <li>
+                              <a href="" ng-click="customGoTo('projects')" ng-cloak>
+                                <i class="icon-Investment-Promotion iconMenuClass pr-2"></i>{{'IPROMOTION' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-cloak>
+                                <i class="icon-Project-list iconMenuClass pr-2"></i>{{'PLIST' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-click="customGoTo('featured-cases')" ng-cloak>
+                                <i class="icon-Featured-Cases iconMenuClass pr-2"></i>{{'FCASES' | translate }}</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'RESEARCH' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                            <li>
+                              <a href="" ng-cloak>
+                                <i class="icon-Research-Report iconMenuClass pr-2"></i>{{'RREPORT' | translate }}</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item ">
+                          <a href="" class="nav-link" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-cloak>{{'MBA' | translate }}</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                          <a href="" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            ng-cloak>{{'CONTACTUS' | translate }}</a>
+                          <ul class="dropdown-menu menuBarPage" aria-labelledby="third-dropdown">
+                            <li>
+                              <a href="" ng-click="customGoTo('branches-offices')" ng-cloak>
+                                <i class="icon-Branch-offices iconMenuClass pr-2"></i>{{'BOFFICES' | translate }}</a>
+                            </li>
+                            <li>
+                              <a href="" ng-cloak>
+                                <i class="icon-Talent-Recruitment iconMenuClass pr-2"></i>{{'TRECRUIMENT' | translate }}</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto hidden-md-down">
+              <div class="header-dropdown-buttons">
+                <div class="btn-group">
+                  <button ng-click="customGoTo('projects')" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon-Search"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-1">
+                    <li>
+                      <form role="search" class="search-box margin-clear">
+                        <div class="form-group has-feedback">
+                          <input type="text" class="form-control" placeholder="Search" ng-model="searchFilterText">
+                          <i ng-click="search(searchFilterText)" class="icon-Search form-control-feedback cursorPointer"></i>
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn-group" ng-hide="!loginUser">
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret backgroundGray" id="header-drop-2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" ng-click="initWishList()">
+                    <i class="fa fa-heart-o marginLeft5"></i>
+                    <span class="cart-count default-bg" ng-show="shopCartArray.length > 0" ng-cloak>{{shopCartCount}}</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
+                    <li>
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                            <th class="amount" ng-cloak>{{'DAMOUNT' | translate}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="product in shopCartArray" ng-click="goToProject(product.get('project').id)">
+                            <td class="product">
+                              <a href="" ng-click="goToProject(product.get('project').id)" ng-cloak>
+                                <span class="small">{{product.get('project').get('title')}}</span>
+                              </a>
+                            </td>
+                            <td class="amount colorPrimary" ng-cloak>
+                              ¥{{product.get('project').get('debitAmount')}}万</td>
+                          </tr>
+                          <tr>
+                            <td class="total-quantity" colspan="2" ng-cloak>{{shopCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="panel-body text-right">
+                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm" ng-cloak> {{'VWISHLIST' | translate}}</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn-group" ng-hide="!loginUser">
+                  <a type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-2" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" ng-click="initOffersList()" ng-cloak>
+                    <i class="icon-Total-offers marginLeft5"></i>
+                    <span class="cart-count default-bg" ng-show="offersCartCount > 0">{{offersCartCount}}</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right cart dropdown-animation" aria-labelledby="header-drop-2">
+                    <li>
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="product" ng-cloak>{{'PACKAGE' | translate}}</th>
+                            <th class="amount" ng-cloak>{{'AMOUNT' | translate}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="offer in offersArray " ng-click="goToProject(offer.get('project').id)">
+                            <td class="product">
+                              <a href="" ng-click="goToProject(offer.get('project').id)" ng-cloak>
+                                <span class="small">{{offer.get('project').get('title')}}</span>
+                              </a>
+                            </td>
+                            <td class="amount colorPrimary" ng-cloak>
+                              ¥{{offer.get('amount')}}万</td>
+                          </tr>
+                          <tr>
+                            <td class="total-quantity" colspan="2" ng-cloak>{{offersCartCount}} {{'TOTAL' | translate}} {{'ITEMS' | translate}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- <div class="panel-body text-right">
+                        <a href="" ng-click="goToWishList()" class="fa fa-heart-o btn btn-group btn-gray btn-sm"> {{'VWISHLIST' | translate}}</a>
+                      </div> -->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- header dropdown buttons end -->
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+    </div>
+    <!-- header-container end -->
+
+    <!-- banner start -->
+    <!-- ================ -->
+    <div id="banner" class="banner clearfix paddingTop60" ng-show="showBanner">
+      <div class="slideshow">
+        <div class="slider-revolution-5-container">
+          <div id="slider-banner-fullwidth-big-height" class="slider-banner-fullwidth-big-height rev_slider" data-version="5.0">
+            <ul class="slides">
+              <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
+
+                <img src="images/home6.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" style="object-fit: cover !important"
+                  class="rev-slidebg">
+
+                <!-- <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+                  data-transform_out="o:0;s:600;" data-width="5000" data-height="5000">
+                </div> -->
+
+                <!-- <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Next Generation Template
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-laptop"></i>
+                  </span> 100% Responsive
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-check"></i>
+                  </span> Bootstrap Based
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-gift"></i>
+                  </span> Packed Full of Features
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-hourglass-half"></i>
+                  </span> Very Elegant Design
+                </div>
+
+                <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <a href="" class="btn btn-default btn-lg btn-animated">Purchase
+                    <i class="fa fa-cart-arrow-down"></i>
+                  </a>
+                </div> -->
+
+              </li>
+              <li data-transition="slidehorizontal" data-slotamount="default" data-masterspeed="default" data-title="">
+
+                <img src="images/home7.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
+
+                <!-- <div class="tp-caption dark-translucent-bg" data-x="center" data-y="center" data-start="0" data-transform_idle="o:1;" data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+                  data-transform_out="o:0;s:600;" data-width="5000" data-height="5000">
+                </div> -->
+
+                <!-- <div class="tp-caption large_white" data-x="left" data-y="150" data-start="1000" data-transform_idle="o:1;" data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">Premium HTML5 Bootstrap Theme
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="230" data-speed="500" data-start="1200" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-laptop"></i>
+                  </span> W3C Validated
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="290" data-speed="500" data-start="1400" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-check"></i>
+                  </span> Unt loremcu dolor
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="350" data-speed="500" data-start="1600" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-gift"></i>
+                  </span> Crossbrowser Compatible
+                </div>
+
+                <div class="tp-caption medium_white" data-x="left" data-y="410" data-speed="500" data-start="1800" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <span class="icon default-bg circle small hidden-sm-down">
+                    <i class="fa fa-hourglass-half"></i>
+                  </span> Very Elegant Design
+                </div>
+
+                <div class="tp-caption small_white" data-x="left" data-y="480" data-speed="500" data-start="2000" data-transform_idle="o:1;"
+                  data-transform_in="y:[100%];sX:1;sY:1;o:0;s:900;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                  <a href="" class="btn btn-default-transparent btn-lg btn-animated">Purchase
+                    <i class="fa fa-cart-arrow-down"></i>
+                  </a>
+                </div> -->
+
+              </li>
+            </ul>
+            <div class="tp-bannertimer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div ng-view></div>
+
+    <!-- footer top start -->
+    <!-- ================ -->
+    <section class="section background-slide-1 dark-translucent-bg" style="background-position: 50% 42%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="call-to-action text-center">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h1 class="title textWhite">Don't Miss Out Our Offers</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quasi explicabo consequatur consectetur,
+                    a atque voluptate officiis eligendi nostrum.</p>
+                </div>
+                <div class="col-lg-4">
+                  <br>
+                  <p>
+                    <a href="" class="btn btn-lg btn-outline-light btn-animated backgroundWhite">Learn More
+                      <i class="fa fa-arrow-right pl-20"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer top end -->
+    </section>
+    <!-- section end -->
+
+    <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+    <!-- ================ -->
+    <footer id="footer" class="clearfix">
+      <div class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row justify-content-lg-center">
+              <div class="col-lg-6">
+                <div class="footer-content text-center padding-ver-clear">
+                  <div class="logo-footer">
+                    <div>
+                      <ul class="listStyleNone paddingLeft0">
+                        <li class="liFooter">
+                          <img id="logo-footer" class="imageFooter mx-auto" src="images/LogoHoopa.png" alt="">
+                        </li>
+                        <li class="liFooter">
+                          <img id="qr-footer" class="imageFooter mx-auto" src="images/qrcode.jpg" alt="">
+                        </li>
+                        <li class="liFooter">
+                          <img id="qr-mini" class="imageFooter mx-auto" src="images/qrmini.jpg" alt="">
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur
+                      doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor
+                      sit amet, illo vel dolorum soluta consectetur.</p> -->
+                    <ul class="list-inline mb-20">
+                      <li class="list-inline-item marginTop10" ng-cloak>
+                        <i class="text-default fa fa-map-marker pr-1"></i>{{'COMPANYADDRESS' | translate}}</li>
+                      <li class="list-inline-item marginTop10" ng-cloak>
+                        <a href="tel:+86 0571 85267521" class="link-dark">
+                          <i class="text-default fa fa-phone pl-10 pr-1"></i>+86 0571 85267521</a>
+                      </li>
+                      <li class="list-inline-item marginTop10" ng-cloak>
+                        <a href="mailto:email@domain.com" class="link-dark">
+                          <i class="text-default fa fa-envelope-o pl-10 pr-1"></i>email@domain.com</a>
+                      </li>
+                    </ul>
+                    <ul class="social-links circle animated-effect-1 margin-clear">
+                      <!-- <li class="facebook">
+                        <a href="">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="twitter">
+                        <a href="">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li> -->
+                      <!-- <li class="googleplus">
+                        <a href="">
+                          <i class="fa fa-google-plus"></i>
+                        </a>
+                      </li> -->
+                      <!-- <li class="linkedin">
+                        <a href="">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="xing">
+                        <a href="">
+                          <i class="fa fa-xing"></i>
+                        </a>
+                      </li> -->
+                    </ul>
+                    <div class="separator"></div>
+                    <p class="text-center margin-clear" ng-cloak>{{'COPYRIGHT' | translate}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    </div>
+    <!-- page-wrapper end -->
+
+    <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+    <script src="js/avLiveQuery-initLeanCloud.min.js"></script>
+
+    <!-- Jquery and Bootstap core js files -->
+    <!-- <script src="plugins/jquery.min.js"></script> -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery Revolution Slider  -->
+    <script src="plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Isotope javascript -->
+    <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup javascript -->
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Appear javascript -->
+    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="plugins/waypoints/sticky.min.js"></script>
+    <!-- Count To javascript -->
+    <script src="plugins/countTo/jquery.countTo.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="app.min.js"></script>
+    <script src="views/all-views.min.js"></script>
+    <script src="mainControllers/main.min.js"></script>
+
+    <script src="components/version/all-components-version.min.js"></script>
+
+
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-carousel/dist/angular-carousel.min.js"></script>
+
+    <!-- Google Maps javascript -->
+    <!-- <script src="js/google.map.config.js"></script> -->
+    <!-- Slick carousel javascript -->
+    <script src="plugins/slick/slick.min.js"></script>
+
+    <!-- Bootstrap Notify javascript -->
+    <script src="plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- Initialization of Plugins -->
+    <script src="js/template-custom.min.js"></script>
+
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+
+    <!-- Angular Translate -->
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+<script type="text/javascript" src="plugins/rs-plugin-5/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="plugins/rs-plugin-5/js/extensions/revolution.extension.navigation.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container paddingBoxHome">
+  <div class="container">
+    <div class="row">
+
+      <!-- main start -->
+      <!-- ================ -->
+      <div class="main">
+
+        <!-- page-title start -->
+        <!-- ================ -->
+        <h2 class="page-title">{{project.get('title')}}</h2>
+        <div class="separator-2"></div>
+        <!-- page-title end -->
+
+        <div class="row">
+          <div class="col-lg-4 padding0">
+            <!-- pills start -->
+            <!-- ================ -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="" data-toggle="tab" title="images">
+                  <i class="fa fa-camera pr-1"></i>{{'PHOTO' | translate}}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="" data-toggle="tab" title="video">
+                  <i class="fa fa-video-camera pr-1"></i>{{'VIDEO' | translate}}</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content clear-style">
+              <div class="tab-pane active" id="pill-1">
+                <div id="carousel-sidebar" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators top">
+                    <li data-target="#carousel-sidebar" data-slide-to="{{$index}}" ng-repeat="image in imageList"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item" ng-class="{'active': $index==0}" ng-repeat="i in imageList">
+                      <div class="listing-item">
+                        <div class="overlay-container">
+                          <img ng-src="{{i.get('url')}}">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <span class="price">
+              <del>$199.00</del> $150.00</span> -->
+            <!-- pills end -->
+          </div>
+          <div class="col-lg-8 pv-30 padding0">
+            <h3 class="mt-4">{{'PDESC' | translate}}</h3>
+            <p>{{project.get('description')}}</p>
+            <h4>{{'CHIGHL' | translate}}</h4>
+            <p>{{project.get('creditHighlights')}}</p>
+            <hr class="mb-10">
+            <div class="clearfix mb-20">
+              <span>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star text-default"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <a href="" ng-hide="project.wished" class="wishlist" ng-click="addToWhishList()">
+                <i class="fa fa-heart-o pl-10 pr-1"></i>{{'ADDWISHLIST' | translate}}</a>
+              <a href="" ng-hide="!project.wished" class="wishlist" ng-click="removeToWhishList()">
+                <i class="fa fa-heart pl-10 pr-1"></i>{{'REMOVEWISHLIST' | translate}}</a>
+              <!-- <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
+                <li class="twitter">
+                  <a href="">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="googleplus">
+                  <a href="">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+                <li class="facebook">
+                  <a href="">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main end -->
+      <div class="col-md-12 light-gray-bg p-20 bordered row styleFactBox paddingXSFact">
+        <div class="col-md-3 marginTop5">
+          <span class="factProject">
+            <i class="icon-Value-projects"></i>{{'DAMOUNT' | translate}}:</span>
+          <span class="factProject colorPrimary">
+            ¥{{project.get('debitAmount')}}万</span>
+        </div>
+        <div class="col-md-2 marginTop5">
+          <span class="factProject">
+            <i class="icon-Total-offers"></i>{{'TOFFER' | translate}}:</span>
+          <span class="factProject colorPrimary">
+            {{totalOffers}}
+          </span>
+        </div>
+        <div class="col-md-3 marginTop5">
+          <span class="factProject">
+            <i class="icon-Offertas"></i>{{'POFFER' | translate}}:</span>
+          <span class="factProject colorPrimary">
+              ¥{{promOffers}}万
+          </span>
+        </div>
+        <div class="col-md-4">
+          <a ng-hide="flagBid" ng-click="makeAnOffer()" class="margin-clear btn btn-default backgroundColorBlue pull-right height40 width100SendCode">
+            <i class="icon-Total-offers spanSignUp"></i> {{'MAKEANOFFER' | translate}}</a>
+          <div ng-show="flagBid" class="input-group">
+            <input type="text" ng-model="offerValue" class="form-control">
+            <div class="input-group-append">
+              <a ng-click="makeABid()" class="input-group-text backgroundColorBlue cursorPointer">
+                <i class="icon-Offertas spanSignUp"></i> {{'MAKEABID' | translate}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row col-md-12 marginTop20">
+        <div class="col-md-4">
+          <ul class="list margin-clear">
+            <li>
+              <strong>{{'PUCOMPANY' | translate}}</strong>
+              <span class="text-right">{{project.get('companyName')}}</span>
+            </li>
+            <li>
+              <strong>{{'PUPROVINCE' | translate}}</strong>
+              <span class="text-right">{{project.get('province')}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list margin-clear">
+            <li>
+              <strong>{{'CUFROM' | translate}}</strong>
+              <span class="text-right">{{project.get('comefrom')}}</span>
+            </li>
+            <li>
+              <strong>{{'DUPRINCIPALI' | translate}}</strong>
+              <span class="text-right colorPrimary">
+                ¥{{project.get('debitPricipalInterest')}}万</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list margin-clear">
+            <li>
+              <strong>{{'PUADDRESS' | translate}} </strong>
+              <span class="text-right">{{project.get('plainAddress')}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="mt-3">
+        <ul class="list margin-clear">
+          <li>
+            <strong>{{'PUCOMPANY' | translate}}</strong>
+            <span class="text-right">{{project.get('companyName')}}</span>
+          </li>
+          <li>
+            <strong>{{'PUPROVINCE' | translate}}</strong>
+            <span class="text-right">{{project.get('province')}}</span>
+          </li>
+          <li>
+            <strong>{{'CUFROM' | translate}}</strong>
+            <span class="text-right">{{project.get('comefrom')}}</span>
+          </li>
+          <li>
+            <strong>{{'PUADDRESS' | translate}} </strong>
+            <span class="text-right">{{project.get('plainAddress')}}</span>
+          </li>
+          <li>
+            <strong>{{'DUPRINCIPALI' | translate}}</strong>
+            <span class="text-right colorPrimary">
+              ¥{{project.get('debitPricipalInterest')}}万</span>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- main-container end -->
+
+<!-- section start -->
+<!-- ================ -->
+<section class="pv-30 light-gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs style-4" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = true; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = false">
+              <i class="fa fa-files-o pr-1"></i>({{assetsList.length}}) {{'ASSETS' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = true; tabSponsorsVisible = false">
+              <i class="fa fa-files-o pr-1"></i>({{borrowerList.length}}) {{'BORROWERS' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = false; tabBorrowersVisible = false; tabSponsorsVisible = true">
+              <i class="fa fa-files-o pr-1"></i>({{sponsorsList.length}}) {{'SPONSORS' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" role="tab" data-toggle="tab" ng-click="tabAssetsVisible = false; tabCommentsVisible = true; tabBorrowersVisible = false; tabSponsorsVisible = false">
+              <i class="fa fa-star pr-1"></i>({{reviews.length}}) {{'REVIEWS' | translate}}</a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content padding-top-clear padding-bottom-clear">
+          <div class="tab-pane" ng-class="{'active': tabAssetsVisible == true}">
+            <div ng-repeat="asset in assetsList">
+              <h4 class="space-top">{{asset.get('title')}}</h4>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-3 text-sm-right">{{'TARRIVAL' | translate}}</dt>
+                <dd class="col-sm-9">{{asset.get('typeArrival')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'CAREA' | translate}}</dt>
+                <dd class="col-sm-9">{{asset.get('constructionArea')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'LAREA' | translate}}</dt>
+                <dd class="col-sm-9">{{asset.get('landArea')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'ADDRESS' | translate}}</dt>
+                <dd class="col-sm-9">{{asset.get('plainAddress')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'PROVINCE' | translate}}</dt>
+                <dd class="col-sm-9">{{asset.get('province')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'LONGLATASSETS' | translate}}</dt>
+                <dd class="col-sm-9">({{asset.get('location').longitude+","+asset.get('location').latitude}})</dd>
+              </dl>
+              <hr>
+            </div>
+          </div>
+          <div class="tab-pane" ng-class="{'active': tabBorrowersVisible == true}">
+            <div ng-repeat="borrower in borrowerList">
+              <h4 class="space-top">{{borrower.get('name')}}</h4>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-3 text-sm-right">{{'BORROPDEB' | translate}}</dt>
+                <dd class="col-sm-9">{{borrower.get('principalDebit')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'BORROINTER' | translate}}</dt>
+                <dd class="col-sm-9">{{borrower.get('interestCreditor')}}</dd>
+              </dl>
+              <hr>
+            </div>
+          </div>
+          <div class="tab-pane" ng-class="{'active': tabSponsorsVisible == true}">
+            <div ng-repeat="sponsor in sponsorsList">
+              <h4 class="space-top">{{sponsor.get('name')}}</h4>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-3 text-sm-right">{{'AMOUNT' | translate}}</dt>
+                <dd class="col-sm-9">{{sponsor.get('amount')}}</dd>
+                <dt class="col-sm-3 text-sm-right">{{'TYPE' | translate}}</dt>
+                <dd class="col-sm-9">{{sponsor.get('type')}}</dd>
+              </dl>
+              <hr>
+            </div>
+          </div>
+          <div class="tab-pane" ng-class="{'active': tabCommentsVisible == true}">
+            <!-- comments start -->
+            <div class="comments margin-clear space-top">
+              <!-- comment start -->
+              <div class="comment clearfix" ng-repeat="c in reviews">
+                <div class="comment-avatar">
+                  <img class="rounded-circle" ng-src="{{c.get('avatarUrl')}}" alt="avatar">
+                </div>
+                <header>
+                  <h3>Amazing!</h3>
+                  <div class="comment-meta">
+                    <i class="fa fa-star {{s.class}}" ng-repeat="s in c.rating"></i> | {{c.createdAt}}</div>
+                </header>
+                <div class="comment-content">
+                  <div class="comment-body clearfix">
+                    <p>{{c.get('content')}}</p>
+                    <!-- <a href="blog-post.html" class="btn-sm-link link-dark pull-right">
+                      <i class="fa fa-reply"></i> Reply</a> -->
+                  </div>
+                </div>
+              </div>
+              <!-- comment end -->
+              <!-- comments end -->
+
+              <p ng-show="!loginUser">{{'MUSTBELOGGED' | translate}}</p>
+
+              <!-- comments form start -->
+              <div class="comments-form" ng-show="loginUser">
+                <h3 class="title">{{'ADDREVIEW' | translate}}</h3>
+                <form>
+                  <!-- <div class="form-group has-feedback">
+                  <label for="name4">{{'NAME' | translate}}</label>
+                  <input type="text" class="form-control" id="name4" placeholder="" required>
+                  <i class="fa fa-user form-control-feedback"></i>
+                </div> -->
+                  <!-- <div class="form-group has-feedback">
+                  <label for="subject4"></label>
+                  <input ng-model="titleReview" type="text" class="form-control" id="subject4" placeholder="" required>
+                  <i class="fa fa-pencil form-control-feedback top22"></i>
+                </div> -->
+                  <div class="form-group">
+                    <label>{{'RATING' | translate}}</label>
+                    <select ng-model="ratingReview" class="form-control" id="review">
+                      <option value="5">5</option>
+                      <option value="4">4</option>
+                      <option value="3">3</option>
+                      <option value="2">2</option>
+                      <option value="1">1</option>
+                    </select>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <label for="message4">{{'MESSAGE' | translate}}</label>
+                    <textarea ng-model="contentReview" class="form-control" rows="8" id="message4" placeholder="" required></textarea>
+                    <i class="fa fa-envelope-o form-control-feedback"></i>
+                  </div>
+                  <a ng-click="publishReview()" class="btn btn-default backgroundColorBlue">{{'PPUBLISH' | translate}}</a>
+                </form>
+              </div>
+              <!-- comments form end -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar start -->
+      <!-- ================ -->
+      <aside class="col-lg-4 col-xl-3 ml-xl-auto">
+        <div class="sidebar">
+          <div class="block clearfix">
+            <h4 class="title">{{"RECOMMENDEDPROJECT" | translate}}</h4>
+            <div class="separator-2"></div>
+            <div class="media margin-clear" ng-repeat="p in projects" ng-hide="p.id == project.id">
+              <div class="d-flex pr-2">
+                <div class="overlay-container">
+                  <img class="media-object recommendedProjectClass" ng-src="{{p.mainImage}}" alt="blog-thumb">
+                  <a href="" ng-click="goToProject(p.id)" class="overlay-link small">
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">
+                  <a href="" ng-click="goToProject(p.id)">{{p.title}}</a>
+                </h6>
+                <p class="margin-clear">
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                  <i class="fa fa-star text-default"></i>
+                </p>
+                <p class="price colorPrimary">¥{{p.amount}}万</p>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </aside>
+      <!-- sidebar end -->
+    </div>
+</section>
+<!-- section end -->
